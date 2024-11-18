@@ -127,7 +127,9 @@ class LoginApiPage extends StatelessWidget {
                   colors: Colors.black,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed('/register');
+                  },
                   child: MyText(
                     hintText: 'Sign Up',
                     fontSize: 16,

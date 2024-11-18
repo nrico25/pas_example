@@ -4,6 +4,7 @@ import 'package:pas_example/bindings/bindings.dart';
 import 'package:pas_example/login/login_page.dart';
 import 'package:pas_example/pages/bottom_nav_pages.dart';
 import 'package:pas_example/pages/loginPage.dart';
+import 'package:pas_example/register/register_page.dart';
 
 
 void main() {
@@ -23,6 +24,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/',
           page: () => LoginApiPage(),
+        ),
+        GetPage(
+          name: '/register',
+          page: () => RegisterPage(),
         ),
         GetPage(
           name: '/bottomnav',
