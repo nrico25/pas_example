@@ -14,6 +14,7 @@ class LoginController extends GetxController {
     try {
       final response = await loginService.login(username, password);
       if (response.status == true) {
+        
         loginStatus.value = response.message;
         token.value = response.token ?? '';
       } else {

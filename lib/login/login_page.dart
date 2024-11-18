@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pas_example/controllers/username_controller.dart';
 import 'package:pas_example/login/login_controller.dart';
 import '../widget/my_text.dart';
 import '../widget/my_textfield.dart';
@@ -78,6 +79,7 @@ class LoginApiPage extends StatelessWidget {
                                 passwordController.text);
                             if (controller.loginStatus.value ==
                                 "Login success") {
+                              Get.put(UserController()).setUsername(usernameController.text);
                               Get.snackbar(controller.loginStatus.value,
                                   controller.token.value);
                               Get.toNamed('/bottomnav');
